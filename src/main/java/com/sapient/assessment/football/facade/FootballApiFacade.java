@@ -41,7 +41,7 @@ public class FootballApiFacade {
     }
 
     public String getOverallLeaguePosition(String leagueId, String teamId){
-        Standing[] standings = restTemplateBuilder.build().getForObject(config.getGetTeamsUrl(), Standing[].class, leagueId, config.getKey());
+        Standing[] standings = restTemplateBuilder.build().getForObject(config.getGetStandingUrl(), Standing[].class, leagueId, config.getKey());
         HashMap<String, Standing> standingMap = new HashMap<>();
         Arrays.asList(standings).forEach(standing -> standingMap.put(standing.getTeamId().trim().toUpperCase(), standing));
         return standingMap.get(teamId).getOverallPosition();

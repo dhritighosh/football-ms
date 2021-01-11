@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Standing {
-    @JsonProperty("team_key")
+    @JsonProperty("team_id")
     private String teamId;
     @JsonProperty("overall_league_position")
     private String overallPosition;
