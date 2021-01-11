@@ -6,10 +6,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class StandingResponse {
-    private FootballEntity country;
-    private FootballEntity league;
-    private FootballEntity team;
+    private Country country;
+    private League league;
+    private Team team;
     private String overallLeaguePosition;
 }

@@ -13,6 +13,7 @@ public class ControllerExceptionManager {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleGenericException(Exception ex){
+        ex.printStackTrace();
         ErrorResponse response = new ErrorResponse();
         response.setErrorType(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase());
         response.setErrorMessage(ex.getMessage());

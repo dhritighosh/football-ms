@@ -13,11 +13,13 @@ management:
   health:
     ldap:
       enabled: false
+server:
+  port: 8888
 
 data:
   api:
-    getCountriesUrl: https://apiv2.apifootball.com/?action=get_countries
-    getTeamsUrl: https://apiv2.apifootball.com/?action=get_teams
-    getCompetitionsUrl: https://apiv2.apifootball.com/?action=get_leagues
-    getStandingUrl: https://apiv2.apifootball.com/?action=get_standings
+    getCountriesUrl: https://apiv2.apifootball.com/?action=get_countries&APIkey={api-key}
+    getCompetitionsUrl: https://apiv2.apifootball.com/?action=get_leagues&country_id={country-id}&APIkey={api-key}
+    getTeamsUrl: https://apiv2.apifootball.com/?action=get_teams&league_id={league-id}&APIkey={api-key}
+    getStandingUrl: https://apiv2.apifootball.com/?action=get_standings&league_id={league-id}&APIkey={api-key}
     key: 9bb66184e0c8145384fd2cc0f7b914ada57b4e8fd2e4d6d586adcc27c257a978
