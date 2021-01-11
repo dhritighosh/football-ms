@@ -1,0 +1,23 @@
+---
+spring:
+  application:
+    name: FootballApplication
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+management:
+  endpoints:
+    web:
+      base-path: /manage
+      exposure:
+        include: health,info,krypt,keepalive,refresh,metrics
+  health:
+    ldap:
+      enabled: false
+
+data:
+  api:
+    getCountriesUrl: https://apiv2.apifootball.com/?action=get_countries
+    getTeamsUrl: https://apiv2.apifootball.com/?action=get_teams
+    getCompetitionsUrl: https://apiv2.apifootball.com/?action=get_leagues
+    getStandingUrl: https://apiv2.apifootball.com/?action=get_standings
+    key: 9bb66184e0c8145384fd2cc0f7b914ada57b4e8fd2e4d6d586adcc27c257a978
