@@ -1,5 +1,6 @@
 package com.sapient.assessment.football.controller;
 
+import com.sapient.assessment.football.exception.CustomException;
 import com.sapient.assessment.football.model.StandingRequest;
 import com.sapient.assessment.football.model.StandingResponse;
 import com.sapient.assessment.football.service.FootballService;
@@ -19,7 +20,7 @@ public class FootballRestController {
     //http://localhost:8888/football/standing?countryName=england&leagueName=Premier%20League&teamName=Manchester%20City
 
     @GetMapping
-    public StandingResponse getStanding(@ModelAttribute StandingRequest request){
+    public StandingResponse getStanding(@ModelAttribute StandingRequest request) throws CustomException {
         return service.getStandingResponse(request);
     }
 }
