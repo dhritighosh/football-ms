@@ -1,8 +1,8 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Build'){
-            steps{
+    stages {
+        stage('Build') {
+            steps {
                 echo 'Building Footbal ms app'
             }
         }
