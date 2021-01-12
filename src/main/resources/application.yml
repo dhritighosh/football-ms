@@ -13,8 +13,8 @@ management:
   health:
     ldap:
       enabled: false
-server:
-  port: 8888
+#server:
+  #port: 8888
 
 data:
   api:
