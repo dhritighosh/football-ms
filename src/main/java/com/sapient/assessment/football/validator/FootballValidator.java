@@ -20,15 +20,15 @@ public class FootballValidator {
             throw new CustomException(response);
         }
         if (StringUtils.isBlank(request.getCountryName())) {
-            response.setErrorMessage("Required query parameters not found: countryName");
+            response.setErrorMessage("Required query parameter not found: countryName");
             throw new CustomException(response);
         }
         if (StringUtils.isBlank(request.getLeagueName())) {
-            response.setErrorMessage("Required query parameters not found: leagueName");
+            response.setErrorMessage("Required query parameter not found: leagueName");
             throw new CustomException(response);
         }
         if (StringUtils.isBlank(request.getTeamName())) {
-            response.setErrorMessage("Required query parameters not found: teamName");
+            response.setErrorMessage("Required query parameter not found: teamName");
             throw new CustomException(response);
         }
 
